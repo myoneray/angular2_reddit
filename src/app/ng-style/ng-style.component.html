@@ -1,0 +1,46 @@
+<h4 class="ui horizontal divider header">
+  ng-style works!
+</h4>
+<!-- ngstyle -->
+<!-- [style.<cssproperty>="value"] -->
+<div class="" [style.background-olor]="'yellow'">
+  yellow
+</div>
+<div [ngStyle]="{color:'red','background-color':'blue'}">
+  blue
+</div>
+
+
+<h4 class="ui horizontal divider header">开始-点击按钮 实现输入框改变字体大小背景颜色</h4>
+<div class="ui input">
+  <input type="text" name="color" value="{{color}}" #colorinput>
+</div>
+<div class="ui input">
+  <input type="text" name="fontSize" value="{{fontSize}}" #fontinput>
+</div>
+
+<button class="ui primary button" (click)="apply(colorinput.value, fontinput.value)">
+  Apply settings
+</button>
+<h6 class="ui horizontal divider header">
+  ngStyle literal and style.font-size.px
+</h6>
+<div>
+  <span [ngStyle]="{color: 'red'}" [style.font-size.px]="fontSize">
+    red text
+  </span>
+</div>
+<h6 class="ui horizontal divider header">
+      ngStyle with object property from variable
+    </h6>
+<div>
+  <span [ngStyle]="{color: color}">
+        {{ color }} text
+      </span>
+</div>
+<h6 class="ui horizontal divider header">
+      style from variable
+    </h6>
+<div [style.background-color]="color" style="color: white;">
+  {{ color }} background
+</div>
