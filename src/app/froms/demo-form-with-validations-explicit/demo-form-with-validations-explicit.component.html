@@ -1,0 +1,32 @@
+<div class="ui raised segment">
+  <h2 class="ui header">表单验证:多个输入框</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+
+    <div class="field" [class.error]="!sku.valid && sku.touched">
+      <label for="skuInput">SKU</label>
+      <input type="text" id="skuInput" placeholder="SKU" [formControl]="sku">
+      <div *ngIf="!sku.valid" class="ui error message">SKU 无效</div>
+      <div *ngIf="sku.hasError('required')" class="ui error message">SKU 非空</div>
+    </div>
+
+
+    <div class="field" [class.error]="!name.valid && name.touched">
+      <label for="nameInput">name</label>
+      <input type="text" id="nameInput" placeholder="name" [formControl]="name">
+      <div *ngIf="!name.valid" class="ui error message">name 无效</div>
+      <div *ngIf="name.hasError('required')" class="ui error message">name 非空</div>
+    </div>
+
+
+    <div class="field" [class.error]="!address.valid && address.touched">
+      <label for="addressInput">address</label>
+      <input type="text" id="addressInput" placeholder="address" [formControl]="address">
+      <div *ngIf="!address.valid" class="ui error message">address 无效</div>
+      <div *ngIf="address.hasError('required')" class="ui error message">address 非空</div>
+    </div>
+
+    <div *ngIf="!myForm.valid" class="ui error message">Form 无效</div>
+
+    <button type="submit" class="ui button">控制台打印结果！</button>
+  </form>
+</div>

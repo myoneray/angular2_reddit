@@ -1,0 +1,23 @@
+<div class="ui raised segment">
+  <h2 class="ui header">监听变化</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form">
+
+    <div class="field" [class.error]="!sku.valid && sku.touched">
+      <label for="skuInput">SKU</label>
+      <input type="text" class="form-control" id="skuInput" placeholder="SKU" [formControl]="sku">
+      <div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>
+      <div *ngIf="sku.hasError('required')" class="ui error message">SKU is required</div>
+    </div>
+
+    <div class="field" [class.error]="!name.valid && name.touched">
+      <label for="nameInput">name</label>
+      <input type="text" class="form-control" id="nameInput" placeholder="name" [formControl]="name">
+      <div *ngIf="!name.valid" class="ui error message">name is invalid</div>
+      <div *ngIf="name.hasError('required')" class="ui error message">name is required</div>
+    </div>
+
+    <div *ngIf="!myForm.valid" class="ui error message">Form is invalid</div>
+
+    <button type="submit" class="ui button">在控制台动态监控输入内容</button>
+  </form>
+</div>
