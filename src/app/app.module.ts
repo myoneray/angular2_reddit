@@ -5,12 +5,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NgClassComponent } from './ng-class/ng-class.component';
-import { NgStyleComponent } from './ng-style/ng-style.component';
-import { NgSwitchComponent } from './ng-switch/ng-switch.component';
-import { NgIfComponent } from './ng-if/ng-if.component';
-import { NgForComponent } from './ng-for/ng-for.component';
-import { NgNonBindableComponent } from './ng-non-bindable/ng-non-bindable.component';
+import { NgClassComponent } from './ng/ng-class/ng-class.component';
+import { NgStyleComponent } from './ng/ng-style/ng-style.component';
+import { NgSwitchComponent } from './ng/ng-switch/ng-switch.component';
+import { NgIfComponent } from './ng/ng-if/ng-if.component';
+import { NgForComponent } from './ng/ng-for/ng-for.component';
+import { NgNonBindableComponent } from './ng/ng-non-bindable/ng-non-bindable.component';
 import { DemoFormSkuComponent } from './froms/demo-form-sku/demo-form-sku.component';
 import { DemoFormSkuBuilderComponent } from './froms/demo-form-sku-builder/demo-form-sku-builder.component';
 import { DemoFormWithValidationsComponent } from './froms/demo-form-with-validations/demo-form-with-validations.component';

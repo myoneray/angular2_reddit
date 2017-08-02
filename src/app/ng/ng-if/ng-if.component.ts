@@ -12,4 +12,7 @@ export class NgIfComponent implements OnInit {
   ngOnInit() {
   }
 
+  showDiv() {
+    return true;
+  }
 }
