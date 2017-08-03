@@ -35,3 +35,17 @@
 <app-demo-form-custom-validations></app-demo-form-custom-validations>
 <app-demo-form-value-chang></app-demo-form-value-chang>
 <app-demo-form-ng-model></app-demo-form-ng-model> -->
+
+
+<div>
+  <nav>
+    <div class="ui buttons">
+      <button class="ui white basic button" disabled="">路由切换</button>
+      <button class="ui red basic button"><a [routerLink]="['home']">Home</a></button>
+      <button class="ui green basic button"><a [routerLink]="['about']">About</a></button>
+      <button class="ui yellow basic button"><a [routerLink]="['contact']">Contact Us</a></button>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

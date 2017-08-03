@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule,Routes } from '@angular/router';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NgClassComponent } from './ng/ng-class/ng-class.component';
@@ -20,6 +22,20 @@ import { DemoFormCustomValidationsComponent } from './froms/demo-form-custom-val
 import { DemoFormValueChangComponent } from './froms/demo-form-value-chang/demo-form-value-chang.component';
 import { DemoFormNgModelComponent } from './froms/demo-form-ng-model/demo-form-ng-model.component';
 
+
+import { HomePageComponent } from './page/home-page/home-page.component';
+import { AboutPageComponent } from './page/about-page/about-page.component';
+import { ContactPageComponent } from './page/contact-page/contact-page.component';
+
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomePageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'contactus', redirectTo: 'home' },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,15 +52,21 @@ import { DemoFormNgModelComponent } from './froms/demo-form-ng-model/demo-form-n
     DemoFormValidationsShorthandComponent,
     DemoFormCustomValidationsComponent,
     DemoFormValueChangComponent,
-    DemoFormNgModelComponent
+    DemoFormNgModelComponent,
+    HomePageComponent,
+    AboutPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes) // <-- routes
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ]
 })
 export class AppModule { }
