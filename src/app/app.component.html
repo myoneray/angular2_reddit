@@ -1,3 +1,20 @@
+<!-- Menu Bar -->
+<!-- <div class="ui menu">
+  <div class="ui container">
+    <a href="#" class="header item">
+      <img class="logo" src="/assets/images/ng-book-2-minibook.png">
+      ng-book 2
+    </a>
+    <div class="header item borderless">
+      <h1 class="ui header">
+        Angular 2 Simple Example
+      </h1>
+    </div>
+  </div>
+</div> -->
+
+
+
 <!-- <form class="ui large form  segment">
   <h3 class="ui header">Add a  link</h3>
   <div class="field">
@@ -37,15 +54,26 @@
 <app-demo-form-ng-model></app-demo-form-ng-model> -->
 
 
-<div>
-  <nav>
-    <div class="ui buttons">
-      <button class="ui white basic button" disabled="">路由切换</button>
-      <button class="ui red basic button"><a [routerLink]="['home']">Home</a></button>
-      <button class="ui green basic button"><a [routerLink]="['about']">About</a></button>
-      <button class="ui yellow basic button"><a [routerLink]="['contact']">Contact Us</a></button>
-    </div>
-  </nav>
-
-  <router-outlet></router-outlet>
+<div class="ui  container">
+  <div class="ui center aligned basic segment">
+    <nav>
+      <div class="five ui buttons">
+        <button class="ui red button" [routerLink]="['home']">Home</button>
+        <button class="ui orange button" [routerLink]="['about']">About</button>
+        <button class="ui yellow button" [routerLink]="['contact']">Contact Us</button>
+        <button class="ui olive button" [routerLink]="['artId/123']">ArtId/123</button>
+        <button class="ui green button" [routerLink]="['music']"> music </button>
+        <!-- <button class="ui teal button">Teal</button>
+      <button class="ui blue button">Blue</button>
+      <button class="ui violet button">Violet</button>
+      <button class="ui purple button">Purple</button>
+      <button class="ui pink button">Pink</button>
+      <button class="ui brown button">Brown</button>
+      <button class="ui grey button">Grey</button>
+      <button class="ui black button">Black</button> -->
+      </div>
+    </nav>
+    <div class="ui horizontal divider">Content </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>

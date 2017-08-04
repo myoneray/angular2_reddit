@@ -3,8 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule,Routes } from '@angular/router';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
+
+
+import  './music/music.app';
 
 import { AppComponent } from './app.component';
 import { NgClassComponent } from './ng/ng-class/ng-class.component';
@@ -26,6 +29,13 @@ import { DemoFormNgModelComponent } from './froms/demo-form-ng-model/demo-form-n
 import { HomePageComponent } from './page/home-page/home-page.component';
 import { AboutPageComponent } from './page/about-page/about-page.component';
 import { ContactPageComponent } from './page/contact-page/contact-page.component';
+import { SearchComponent } from './music/search/search.component';
+
+// import { ArtListComponent } from './music/art-list/art-list.component';
+// import { TrackComponent } from './music/track/track.component';
+// import { AlbumComponent } from './music/album/album.component';
+// import { MusicComponent } from './music/music.component';
+// import { ArtIdComponent } from './page/art-id/art-id.component';
 
 
 const routes: Routes = [
@@ -33,6 +43,8 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
+  // { path: 'artId/:id', component: ArtIdComponent },
+  // { path: 'music', component: MusicComponent },
   { path: 'contactus', redirectTo: 'home' },
 ];
 
@@ -55,7 +67,13 @@ const routes: Routes = [
     DemoFormNgModelComponent,
     HomePageComponent,
     AboutPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    SearchComponent
+    // ArtListComponent,
+    // TrackComponent,
+    // AlbumComponent,
+    // MusicComponent,
+    // ArtIdComponent
   ],
   imports: [
     BrowserModule,
