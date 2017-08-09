@@ -1,4 +1,11 @@
 @import './app/vendor/semantic.min.css';
+.products-area {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px red dotted;
+}
+
+
 
 .ui.menu .item img.logo {
     margin-right: 1.5em;
@@ -46,4 +53,3 @@ ul.ui.list li:before {
   clear: both;
   width: 100%;
 }
-

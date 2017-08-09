@@ -1,0 +1,20 @@
+<div class="ui breadcrumb">
+  <a [routerLink]="['./main']">Main</a>
+  <div class="divider"> / </div>
+  <a [routerLink]="['./interest']">Interest</a>
+  <div class="divider"> / </div>
+  <a [routerLink]="['./sportify']">Sportify</a>
+  <div class="divider"> / </div>
+  <a [routerLink]="['./book']">book</a>
+  <div class="divider"> / </div>
+  <a [routerLink]="['./phone']">phone</a>
+  <div class="divider"> / </div>
+  <a [routerLink]="['./computer']">computer</a>
+  <div class="divider"> / </div>
+  Enter id: <input #id size="6">
+  <button (click)="goToProduct(id.value)">Go</button>
+</div>
+
+<div class="products-area">
+  <router-outlet></router-outlet>
+</div>
